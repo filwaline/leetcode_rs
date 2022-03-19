@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 automod = { path = "automod" }
+test-case = "2.0.0"

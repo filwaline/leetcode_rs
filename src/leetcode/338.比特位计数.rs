@@ -40,6 +40,7 @@ struct Solution;
 #[cfg(test)]
 mod tests {
     use super::*;
+    use test_case::test_case;
 
     #[test]
     fn test_5() {
@@ -49,5 +50,11 @@ mod tests {
     #[test]
     fn test_2() {
         assert!(Solution::count_bits(2) == vec![0, 1, 1])
+    }
+
+    #[test_case(3 => vec![0,1,1,2]; "Input 3")]
+    #[test_case(6 => vec![0,1,1,2,1,2,2]; "Input 6")]
+    fn test_n(n: i32) -> Vec<i32> {
+        Solution::count_bits(n)
     }
 }
